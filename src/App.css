@@ -1,0 +1,146 @@
+:root{
+  --bg-color:#fff6ed;
+  --bg-color-variant:#1f1f1f6e;
+  --light-color-variant:#ffffff;
+  --primary-color:#0a00d0;
+  --light-color:#fff6ed;
+  --primary-color--variant:#2d00d0e2;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background:var(--bg-color);
+  padding:2% 2%;
+}
+
+/* -------------------------- Loan page ------------------------*/
+.form-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+ 
+}
+.loan-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background:var(--light-color);
+  width: 64%;
+  align-items: center;
+}
+.loan-form h1{
+  font-weight: 500;
+}
+
+.select-paire, .input-paire {
+  display: flex;
+  flex-direction: row;
+  width :100%;
+  justify-content: space-between;
+  flex-wrap :wrap;
+}
+.select , .input {
+  display: flex;
+  flex-direction: column;
+  width :49%;
+  height : 55px
+}
+
+.select select , .input input {
+  height : 55px;
+  background:var(--light-color);
+}
+.select label , .input label {
+  margin-bottom : 5px
+}
+.tree{
+  width :30%;
+}
+
+.sub-button{
+  margin-top: 10px;
+  width: 100%;
+  height: 36px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--light-color);
+  cursor: pointer;
+
+}
+.sub-button:hover{
+  background: var(--primary-color--variant);
+  color: var(--light-color-variant);
+}
+.succes span {
+  color: green;
+}
+.sorry span{
+  color: red
+}
+.succes p, .sorry p{
+  font-size: 25px;
+}
+
+/* -------------------------- Footer ------------------------*/
+.foot-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+.foot-content a, .foot-content p{
+  color:#414345;
+  text-decoration: none;
+}
+
+/* -------------------------- Media screen ------------------------*/
+@media screen and (max-width: 768px){
+
+  .loan-form{
+    gap: 7px;
+    width: 100%;
+    padding: 2%;
+  }
+  .content{
+    width: 100%;
+  }
+  section .button{
+    width: 80%;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 400px){
+
+  .form-box{
+    margin: 15% 0%;
+  }
+  .loan-form{
+    gap: 7px;
+    width: 100%;
+    padding: 2%;
+  }
+
+  section .button{
+    width: 80%;
+    margin: 5px;
+  }
+
+  .select , .input {
+    display: flex;
+    flex-direction: column;
+    height : 55px
+  }
+
+  .tree{
+    width :100%;
+  }
+}
